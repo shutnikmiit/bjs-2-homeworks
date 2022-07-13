@@ -5,9 +5,9 @@ function solveEquation(a, b, c) {
 
   const discriminant = Math.pow(b, 2) - 4 * a * c;
 
-  if (discriminant < 0) {
-    arr = [];
-  }
+  //if (discriminant < 0) {
+  //  arr = [];
+ // }
   if (discriminant === 0) {
     arr.push(-b / (2 * a));
   }

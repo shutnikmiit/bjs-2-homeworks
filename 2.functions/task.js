@@ -25,25 +25,21 @@ function worker(arr) {
   return sum;
 }
 
-function makeWork(arrOfArr, func) {
+function makeWork(arrOfArr, worker) {
   let max = 0;
 
   for (let arr of arrOfArr) {
-    for (let arr of arrOfArr) {
-      const funcResult = worker(arr);
-      if (max < funcResult) {
-        max = funcResult;
-      }
+    const funcResult = worker(arr);
+    if (max < funcResult) {
+      max = funcResult;
     }
-
-    return max;
   }
 
-  // Задание 3
-  function worker2(arr) {
-    const max = Math.max(...arr);
-    const min = Math.min(...arr);
-    const difference = max - min;
-    return Math.abs(difference);
-  }
+  return max;
 }
+
+// Задание 3
+function worker2(arr) {
+  return Math.abs(Math.max(...arr) - Math.min(...arr));
+}
+

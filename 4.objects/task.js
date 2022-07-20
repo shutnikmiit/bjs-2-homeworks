@@ -20,9 +20,10 @@ Student.prototype.addMarks = function (...grades) {
   if (this.marks === undefined) {
     this.marks = [...grades];
   } else {
-    for (let grade of grades) {
+    this.marks.push(...grades)
+    /*for (let grade of grades) {
       this.marks.push(grade);
-    }
+    }*/
   }
 }
 

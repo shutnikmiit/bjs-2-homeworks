@@ -31,8 +31,8 @@ class AlarmClock {
 
   start() {
     let checkClock = clock => {
-      if (clock.alarmCollection.time === getCurrentFormattedTime()) {
-        callback();
+      if (clock.time === this.getCurrentFormattedTime()) {
+        clock.callback();
       }
     };
 
